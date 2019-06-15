@@ -110,7 +110,7 @@ class FeeCalculatorTest extends TestCase
 
         $fee = $this->calculator->calculate($application);
 
-        $this->assertEquals(105, $fee);
+        $this->assertEquals(105.0, $fee);
     }
 
     public function testItAccountsForTheFeeStayingTheSame()
@@ -119,7 +119,7 @@ class FeeCalculatorTest extends TestCase
 
         $fee = $this->calculator->calculate($application);
 
-        $this->assertEquals(90, $fee);   
+        $this->assertEquals(90.0, $fee);   
     }
 
     public function testItCopesWithDecimalAmounts()
@@ -128,6 +128,6 @@ class FeeCalculatorTest extends TestCase
 
         $fee = $this->calculator->calculate($application);
 
-        $this->assertEquals(105, $fee);
+        $this->assertEquals(105.00, $fee);
     }
 }
